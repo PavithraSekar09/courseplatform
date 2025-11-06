@@ -1,0 +1,131 @@
+/* WRAPPER CONTAINER */
+.wrapper {
+  position: relative;
+  width: 400px;
+  height: 460px;
+  background: #1e3a8a; /* dark blue */
+  border-radius: 12px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transition: height 0.3s ease;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+}
+
+.wrapper.active {
+  height: 520px;
+}
+
+/* FORM CONTAINERS */
+.form-box {
+  width: 100%;
+  padding: 40px;
+  position: absolute;
+  transition: transform 0.3s ease;
+}
+
+.form-box.login {
+  transform: translateX(0);
+}
+
+.wrapper.active .form-box.login {
+  transform: translateX(-400px);
+}
+
+.form-box.register {
+  transform: translateX(400px);
+}
+
+.wrapper.active .form-box.register {
+  transform: translateX(0);
+}
+
+/* FORM ELEMENTS */
+form h1 {
+  font-size: 32px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.input-box {
+  position: relative;
+  width: 100%;
+  height: 45px;
+  margin: 25px 0;
+}
+
+.input-box input {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 30px;
+  outline: none;
+  color: #fff;
+  padding: 0 40px 0 15px;
+  font-size: 15px;
+  transition: border-color 0.2s;
+}
+
+.input-box input:focus {
+  border-color: #fff;
+}
+
+.icon {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #fff;
+  font-size: 18px;
+}
+
+.remember-forgot {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  margin: 10px 0 20px;
+}
+
+.remember-forgot a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.remember-forgot a:hover {
+  text-decoration: underline;
+}
+
+button {
+  width: 100%;
+  height: 45px;
+  border: none;
+  border-radius: 30px;
+  background: #fff;
+  color: #1e3a8a;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+button:hover {
+  background: #cbd5e1;
+}
+
+.register-link {
+  text-align: center;
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+.register-link a {
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.register-link a:hover {
+  text-decoration: underline;
+}
